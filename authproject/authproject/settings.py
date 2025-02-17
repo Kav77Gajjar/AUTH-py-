@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'auth_app',
 ]
 
 MIDDLEWARE = [
@@ -74,9 +75,14 @@ WSGI_APPLICATION = 'authproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default' : {
+        'ENGINE': 'django.db.backends.mysql', # here i use mysql
+        'NAME': 'auth',  # Replace with your MySQL database name
+        'USER': 'root',  # Replace with your MySQL username
+        'PASSWORD': 'kavy',  # Replace with your MySQL password
+        'HOST': 'localhost',  # Or your database host
+        'PORT': '3306',  # Default MySQL portENGINE': 'django.db.backends.mysql',
+
     }
 }
 
